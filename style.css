@@ -1,0 +1,151 @@
+/* Jeremy Henry-Atohengbe | CSC 6370 | CW-05 */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 32px 16px;
+    background-color: #f3f5f8;
+    color: #202938;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+main {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 24px;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 1.8rem;
+}
+
+h2 {
+    margin: 0 0 12px;
+    font-size: 1.35rem;
+}
+
+header p {
+    margin: 0;
+    color: #4b5563;
+}
+
+section {
+    margin-bottom: 24px;
+    padding: 24px;
+    border: 1px solid #d5dbe3;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #687587;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #202938;
+    font: inherit;
+}
+
+input:focus-visible,
+button:focus-visible {
+    outline: 3px solid #1769aa;
+    outline-offset: 3px;
+}
+
+/* JavaScript sets aria-invalid only when a field has an error. */
+input[aria-invalid="true"] {
+    border: 2px solid #b00020;
+    background-color: #fff7f8;
+}
+
+/* Error messages remain above their corresponding fields. */
+.error {
+    margin: 0 0 6px;
+    color: #b00020;
+    font-weight: bold;
+}
+
+.error:empty,
+#error-summary:empty,
+#result:empty {
+    display: none;
+}
+
+#error-summary {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-left: 4px solid #b00020;
+    background-color: #fff1f3;
+    color: #b00020;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 24px;
+    border: 2px solid #184e80;
+    border-radius: 4px;
+    background-color: #184e80;
+    color: #ffffff;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: #103858;
+    background-color: #103858;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+#result {
+    border-left: 4px solid #22683d;
+    background-color: #f1faf4;
+}
+
+#result h2 {
+    color: #18502d;
+}
+
+#result p {
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
