@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jeremy Henry-Atohengbe">
+    <title>CW-05 | JavaScript Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validation.js" defer></script>
+</head>
+<body>
+    <!-- Jeremy Henry-Atohengbe | CSC 6370 | CW-05 -->
+    <main>
+        <header>
+            <h1>JavaScript Form Validation</h1>
+            <p>Jeremy Henry-Atohengbe | CSC 6370 | CW-05</p>
+        </header>
+
+        <section aria-labelledby="form-heading">
+            <h2 id="form-heading">Add a Person</h2>
+            <p>All fields are required. ID must contain digits only.</p>
+
+            <!-- JavaScript provides the assignment's custom validation. -->
+            <form id="person-form" novalidate>
+                <div id="error-summary" role="status"
+                     aria-live="polite" aria-atomic="true"></div>
+
+                <div class="field">
+                    <p id="id-error" class="error"></p>
+                    <label for="user-id">ID:</label>
+                    <input
+                        type="text"
+                        id="user-id"
+                        name="userId"
+                        inputmode="numeric"
+                        required
+                        aria-describedby="id-error"
+                    >
+                </div>
+
+                <div class="field">
+                    <p id="first-name-error" class="error"></p>
+                    <label for="first-name">First Name:</label>
+                    <input
+                        type="text"
+                        id="first-name"
+                        name="firstName"
+                        autocomplete="given-name"
+                        required
+                        aria-describedby="first-name-error"
+                    >
+                </div>
+
+                <div class="field">
+                    <p id="last-name-error" class="error"></p>
+                    <label for="last-name">Last Name:</label>
+                    <input
+                        type="text"
+                        id="last-name"
+                        name="lastName"
+                        autocomplete="family-name"
+                        required
+                        aria-describedby="last-name-error"
+                    >
+                </div>
+
+                <button type="submit">Add</button>
+            </form>
+        </section>
+
+        <!-- JavaScript replaces this section's content after each valid entry. -->
+        <section id="result" aria-live="polite" aria-atomic="true"></section>
+    </main>
+</body>
+</html>
